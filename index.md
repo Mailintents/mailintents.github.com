@@ -29,4 +29,4 @@ Once I had the bright idea of watching a GitHub repository for a popular open so
 
 ## Get Involved
 
-Star the repository on github. Follow [@mailintents](https://twitter.com/mailintents) on Twitter. Propose implemntations, elaborate on use cases, pitch the idea to mail agent manufacturers and transational email processors.
+Star the [repository](https://github.com/Mailintents/mailintents.github.com) on github. Follow [@mailintents](https://twitter.com/mailintents) on Twitter. Propose implemntations, elaborate on use cases, pitch the idea to mail agent manufacturers and transational email processors.
