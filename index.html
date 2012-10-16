@@ -1,0 +1,159 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body{
+  color:#444;
+  font-family:Georgia, Palatino, 'Palatino Linotype', Times,
+              'Times New Roman', serif,
+              "Hiragino Sans GB", "STXihei", "微软雅黑";
+  font-size:12px;
+  line-height:1.5em;
+  background:#fefefe;
+  width: 45em;
+  margin: 10px auto;
+  padding: 1em;
+  outline: 1300px solid #FAFAFA;
+}
+
+a{ color: #0645ad; text-decoration:none;}
+a:visited{ color: #0b0080; }
+a:hover{ color: #06e; }
+a:active{ color:#faa700; }
+a:focus{ outline: thin dotted; }
+a:hover, a:active{ outline: 0; }
+
+span.backtick {
+  border:1px solid #EAEAEA;
+  border-radius:3px;
+  background:#F8F8F8;
+  padding:0 3px 0 3px;
+}
+
+::-moz-selection{background:rgba(255,255,0,0.3);color:#000}
+::selection{background:rgba(255,255,0,0.3);color:#000}
+
+a::-moz-selection{background:rgba(255,255,0,0.3);color:#0645ad}
+a::selection{background:rgba(255,255,0,0.3);color:#0645ad}
+
+p{
+margin:1em 0;
+}
+
+img{
+max-width:100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+font-weight:normal;
+color:#111;
+line-height:1em;
+}
+h4,h5,h6{ font-weight: bold; }
+h1{ font-size:2.5em; }
+h2{ font-size:2em; border-bottom:1px solid silver; padding-bottom: 5px; }
+h3{ font-size:1.5em; }
+h4{ font-size:1.2em; }
+h5{ font-size:1em; }
+h6{ font-size:0.9em; }
+
+blockquote{
+color:#666666;
+margin:0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr { display: block; height: 2px; border: 0; border-top: 1px solid #aaa;border-bottom: 1px solid #eee; margin: 1em 0; padding: 0; }
+
+
+pre , code, kbd, samp { 
+  color: #000; 
+  font-family: monospace; 
+  font-size: 0.88em; 
+  border-radius:3px;
+  background-color: #F8F8F8;
+  border: 1px solid #CCC; 
+}
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 5px;}
+pre code { border: 0px !important; }
+code { padding: 0 3px 0 3px; }
+
+b, strong { font-weight: bold; }
+
+dfn { font-style: italic; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+ul, ol { margin: 1em 0; padding: 0 0 0 2em; }
+li p:last-child { margin:0 }
+dd { margin: 0 0 0 2em; }
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+@media only screen and (min-width: 480px) {
+body{font-size:14px;}
+}
+
+@media only screen and (min-width: 768px) {
+body{font-size:16px;}
+}
+
+@media print {
+  * { background: transparent !important; color: black !important; filter:none !important; -ms-filter: none !important; }
+  body{font-size:12pt; max-width:100%;}
+  a, a:visited { text-decoration: underline; }
+  hr { height: 1px; border:0; border-bottom:1px solid black; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; padding-right: 1em; page-break-inside: avoid; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page :left { margin: 15mm 20mm 15mm 10mm; }
+  @page :right { margin: 15mm 10mm 15mm 20mm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}</style></head><body><h1 id="mail-intents">Mail Intents</h1>
+
+<p>Enabling push-based API for the universal interface with humans as endpoints - email.</p>
+
+<ul>
+<li>or making transaction mail suck less.</li>
+<li>or because even bacn becomes trite.</li>
+<li>or netizens for a meaningful inbox.</li>
+<li>or your own personal webhooks.</li>
+</ul>
+
+<h2 id="why">Why?</h2>
+
+<p>You hear the cries of "email is broken" repeating every few years, but at its core, email is pretty great. It's the largest social network, humans are the nodes, and it supports push-messaging. But ask any Internet user - most hate the cognitive load of a never-empty inbox.</p>
+
+<p>Email should be smarter. Computers should do more things for us without so much micromanagement.</p>
+
+<h2 id="how">How?</h2>
+
+<p>This proposal is in a very early stage, and it's mostly about identifying a pain point. But at a high level, Mail Intents implements a small amount of metadata on email messages to give mail agents hints about the meaning of the email so that they can perform rich, useful actions based on the messages.</p>
+
+<h2 id="stories">Stories</h2>
+
+<p>I book a flight and receive a confirmation in my email. My mail client sees that it includes the receipt intent, and adds the transaction to my banking software so that I can reconcile it later. It also sees the travel intent and adds my travel time to my calendar - private, of course, but I can go in later and share it with others if I choose.</p>
+
+<p>I go to my doctor's office with a sore throat and end up getting some bloodwork done. When I leave the office, I can get a discharge summary, listing the examinations and the labs that were ordered, along with anything else that was added to my patient chart. If my email address supports S/MIME secure communications, I can receive the results directly in my email with a Continuity of Care Document and maybe an Invoice intent attached. Otherwise, for privacy, I can receive a Notification intent forwarding me to a secure message website where I can access and download this information. If I have a sophisticated enough mail agent, this process can be done automatically, preserving my privayc thorugh secure encryption while still providing me convenient access to the data I Care about. Next, a few days later, I receive another email, this time with the results of the lab. As a result of all of this, my medical details automatically appear in my Personal Health Record (which is acting as another mail agent, after all) and the financial details end up in my checking account summary.</p>
+
+<p>So, I buy a lot on Amazon. I end up with a lot of transactional email. Once when I first order it. Another when my package is sent. Maybe another when there's a shipping exception - like it can't be delivered because there's a hurricaine or something. Lastly, there's the email when it's delivered. My mail agent can manage this better than I can. The receipt can go into my ledger, the and the package tracking ID can be sent to my phone so I can compulsively keep tabs on my inbound goodies. The thing is, I do care about this information - I just don't want it in my inbox. I'm glad my mail agent is smart enough to know what to do with these emails so I don't have to think about it.</p>
+
+<p>The other day I signed up for an account on a website. I shouldn't have to do this anymore, but there it was: A signup form with fields for email, a confirmation of my email, and a password. Dutifully, I filled it out and hit the signup up button. "Great! Your account has been created. Check your email to confirm your address." Wait, what? I already confirmed it in the field labeled "confirm your email." Thankfully, the confirmation email was sent with a Confirmation intent, and my mail client - expecting this email after having received a Confirmation Web Intent - was able to intercept it before reaching my eyes and complete the confirmation process on my behalf, saving me at least that much hassle.</p>
+
+<p>Once I had the bright idea of watching a GitHub repository for a popular open source project. This was great! I could follow along with the day-to-day development of a project I used heavily. Unfortunately, this also generated a large volume of notification email. Frustrated, I turned off email notifications, instead opting for on-site notifications only. If an inbox was going to be cluttered with this torrent of notifications, it would at least be scoped just to one service, rather than my email, my universal inbox. Entitled millennial that I am, I immediately turned to Twitter to lament the lack of a daily digest version of these notifications. However, since the notifications were being sent with Notification intents, with the resource specified as the repository URI, I realized I could create this functionality myself. I added a rule to hide these email form my inbox and hacked a quick map-reduce script for my mail agent to generate the digest - and set it to run daily.</p>
+
+<h2 id="get-involved">Get Involved</h2>
+
+<p>Star the repository on github. Follow <a href="https://twitter.com/mailintents">@mailintents</a> on Twitter. Propose implemntations, elaborate on use cases, pitch the idea to mail agent manufacturers and transational email processors.</p>
+</body>
